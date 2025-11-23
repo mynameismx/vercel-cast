@@ -2,7 +2,7 @@ export const config = {
   runtime: 'edge',
 };
 
-const domain = "vercel-cast.vercel.app";
+const domain = "m.castopia.site";
 const proxyToRaw : Record<string, string> = {
   "": "castopia.site"
 };
@@ -11,7 +11,7 @@ const proxyTo : Record<string, string> = (() => {
   let result = {};
   for (const proxy in proxyToRaw) {
     result[`${proxy}`] = `${proxyToRaw[proxy]}`;
-    result[`${proxy}`] = `files.${proxyToRaw[proxy]}`;
+    result[`files.${proxy}`] = `files.${proxyToRaw[proxy]}`;
   }
   return result;
 })();
