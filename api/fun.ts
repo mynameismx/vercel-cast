@@ -11,7 +11,7 @@ const proxyTo : Record<string, string> = (() => {
   let result = {};
   for (const proxy in proxyToRaw) {
     result[`${proxy}`] = `${proxyToRaw[proxy]}`;
-    result[`files.${proxy}`] = `files.${proxyToRaw[proxy]}`;
+    result[`${proxy}`] = `files.${proxyToRaw[proxy]}`;
   }
   return result;
 })();
