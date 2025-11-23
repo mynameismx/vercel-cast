@@ -2,7 +2,7 @@ export const config = {
   runtime: 'edge',
 };
 
-const domain = "m.castopia.site";
+const domain = "vercel-cast.vercel.app";
 const proxyToRaw : Record<string, string> = {
   "": "castopia"
 };
