@@ -4,14 +4,14 @@ export const config = {
 
 const domain = "vercel-cast.vercel.app";
 const proxyToRaw : Record<string, string> = {
-  "": "castopia"
+  "": "castopia.site"
 };
 
 const proxyTo : Record<string, string> = (() => {
   let result = {};
   for (const proxy in proxyToRaw) {
-    result[`${proxy}`] = `${proxyToRaw[proxy]}.site`;
-    result[`files.${proxy}`] = `files.${proxyToRaw[proxy]}.site`;
+    result[`${proxy}`] = `${proxyToRaw[proxy]}`;
+    result[`files.${proxy}`] = `files.${proxyToRaw[proxy]}`;
   }
   return result;
 })();
